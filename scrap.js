@@ -6,7 +6,7 @@ puppeteer.use(StealthPlugin())
 
 module.exports.scrap =  (link) => new Promise(async (resolve, reject) => {
     const browser = await puppeteer.launch({
-        headless: true
+        headless: false
     });
     const page = await browser.newPage();
     // Skip images/styles/fonts loading for performance
